@@ -13,6 +13,7 @@ const (
 	down  = "%dB"
 	right = "%dC"
 	left  = "%dD"
+	toCol = "%dG"
 
 	// cursor visibility
 	hide = "?25l"
@@ -96,6 +97,17 @@ func (c *Cursor) Up(lines int) *Cursor {
 }
 func (c *Cursor) Down(lines int) *Cursor {
 	return c.escapeAndWrite(fmt.Sprintf(down, lines))
+}
+
+func (c *Cursor) Right(cols int) *Cursor {
+	return c.escapeAndWrite(fmt.Sprintf(right, cols))
+}
+
+func (c *Cursor) Left(cols int) *Cursor {
+	return c.escapeAndWrite(fmt.Sprintf(left, cols))
+}
+func (c *Cursor) ToCol(col int) *Cursor {
+	return c.escapeAndWrite(fmt.Sprintf(toCol, col))
 }
 
 // formatting
