@@ -19,6 +19,10 @@ const (
 	hide = "?25l"
 	show = "?25h"
 
+	// buffer changing
+	altBuff  = "?1049h"
+	origBuff = "?1049l"
+
 	// formatting
 	clear         = "0m"
 	bold          = "1m"
@@ -88,6 +92,16 @@ func (c *Cursor) Hide() *Cursor {
 }
 func (c *Cursor) Show() *Cursor {
 	return c.escapeAndWrite(show)
+}
+
+// buffer
+
+func (c *Cursor) AltBuffer() *Cursor {
+	return c.escapeAndWrite(altBuff)
+}
+
+func (c *Cursor) OriginalBuffer() *Cursor {
+	return c.escapeAndWrite(origBuff)
 }
 
 // movement
