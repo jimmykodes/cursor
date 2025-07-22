@@ -37,20 +37,21 @@ const (
 	// colors
 	color     = "%dm"
 	blackFG   = 30
-	blackBG   = 40
 	redFG     = 31
-	redBG     = 41
 	greenFG   = 32
-	greenBG   = 42
 	yellowFG  = 33
-	yellowBG  = 43
 	blueFG    = 34
-	blueBG    = 44
 	magentaFG = 35
-	magentaBG = 45
 	cyanFG    = 36
-	cyanBG    = 46
 	whiteFG   = 37
+
+	blackBG   = 40
+	redBG     = 41
+	greenBG   = 42
+	yellowBG  = 43
+	blueBG    = 44
+	magentaBG = 45
+	cyanBG    = 46
 	whiteBG   = 47
 
 	// erasing
